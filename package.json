@@ -1,6 +1,6 @@
 {
   "name": "log4js-syslog-appender",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "syslog appender for log4js",
   "main": "index.js",
   "homepage": "https://github.com/m-reiniger/log4js-syslog-appender",
