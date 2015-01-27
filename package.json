@@ -1,0 +1,41 @@
+{
+  "name": "log4js-syslog-appender",
+  "version": "0.1.0",
+  "description": "syslog appender for log4js",
+  "main": "index.js",
+  "homepage": "https://github.com/m-reiniger/log4js-syslog-appender",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/m-reiniger/log4js-syslog-appender.git"
+  },
+  "engines": {
+    "node": ">=0.10"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "keywords": [
+    "node",
+    "syslog",
+    "log4js",
+    "ain2"
+  ],
+  "author": {
+    "name": "Michael Reiniger",
+    "email": "m.reiniger@silverorbit.de"
+  },
+  "license": "MIT",
+  "directories": {
+    "test": "test",
+    "lib": "lib"
+  },
+  "dependencies": {
+    "ain2": "^1.5.0",
+    "log4js": "^0.6.22"
+  },
+  "devDependencies": {
+    "mocha": "^2.1.0",
+    "sandboxed-module": "^2.0.0",
+    "should": "^4.6.1"
+  }
+}
