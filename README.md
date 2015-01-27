@@ -24,8 +24,8 @@ Options:
 
 * `tag`: appears in front of your log message in the syslog / default: `log4js`
 * `facility`: your syslog facility / default: `local0`
-* `hostname`: hostname of your syslog server / default `localhost`
-* `port`: port of your syslog server / default `514`
+* `hostname`: hostname of your syslog server / default: `localhost`
+* `port`: port of your syslog server / default: `514`
 
 Code example:
 
@@ -42,8 +42,7 @@ Code example:
         }
     ]});
 
-	var logger = log4js.getLogger('log4js-ain2-tester');
-
+	var logger = log4js.getLogger('syslog');
 
 	logger.trace('a trace message');
 	logger.debug('a debug message');
