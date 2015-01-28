@@ -6,7 +6,7 @@ log4js-syslog-appender works with node versions 0.10.x and 0.11.x.
 
 ## Installation
 
-	npm install log4js-syslog-appender --save-dev
+	npm install log4js-syslog-appender --save
 
 ## Configuration
 
