@@ -2,7 +2,7 @@
 
 This is a syslog appender for log4js. It is a rewrite of https://www.npmjs.com/package/log4js-node-syslog. It uses ain2 (https://github.com/phuesler/ain) again since node-syslog does not work with the latest versions of node. 
 
-log4js-syslog-appender works with node versions 0.10.x and 0.11.x. 
+log4js-syslog-appender works with node versions 0.10.x, 0.11.x and 0.12.x. 
 
 ## Installation
 
