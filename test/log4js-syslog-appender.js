@@ -1,7 +1,7 @@
+
 var should = require('should');
 var sandbox = require('sandboxed-module');
 var assert = require('assert');
-var log4js = require('log4js');
 
 
 describe('log4js-syslog-appender', function () {
@@ -29,20 +29,27 @@ describe('log4js-syslog-appender', function () {
         messages = [];
     };
 
-    var appender = sandbox.require('../lib/log4js-syslog-appender.js', {
-        requires: {
-            'ain2': fakeAin2
-        },
-        globals: {}
-    });
-
-
-    log4js.clearAppenders();
-    log4js.addAppender(appender.configure({}), 'test-logging');
-    var logger = log4js.getLogger('test-logging');
+    var logger;
 
 
     before(function (done) {
+
+        delete require.cache['../lib/log4js-syslog-appender.js'];
+        delete require.cache['ain2'];
+        var appender = sandbox.require('../lib/log4js-syslog-appender.js', {
+            requires: {
+                'ain2': fakeAin2
+            },
+            globals: {}
+        });
+
+        delete require.cache['log4js'];
+        var log4js = require('log4js');
+
+        log4js.clearAppenders();
+        log4js.addAppender(appender.configure({}), 'test-logging');
+        logger = log4js.getLogger('test-logging');
+
         done();
     });
 

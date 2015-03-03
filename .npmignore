@@ -25,13 +25,14 @@ coverage
 build/Release
 
 # Dependency directory
-# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git-
+# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
 node_modules
 
-# IDE
-.idea
-
 # Vagrant
+Vagrantfile
 .vagrant
+puphpet
 
-
+# Tests
+test
+Makefile

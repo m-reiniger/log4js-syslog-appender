@@ -12,12 +12,15 @@ log4js-syslog-appender works with node versions 0.10.x, 0.11.x and 0.12.x.
 
 In your log4js config you can use the following configuration:
 
+### UDP
+
 	"appender": {
 		"type": "log4js-syslog-appender",
-		"tag": "YOUR NODE TAG",
+		"tag": "YOUR LOG TAG",
 		"facility": "local0",
 		"hostname": "localhost",
-		"port": 514
+		"port": 514,
+		"transport": "UDP"
     }
 
 Options:
@@ -26,6 +29,24 @@ Options:
 * `facility`: your syslog facility / default: `local0`
 * `hostname`: hostname of your syslog server / default: `localhost`
 * `port`: port of your syslog server / default: `514`
+* `transport`: how to connect to syslog server / default: `UDP`
+
+### Socket
+
+	"appender": {
+		"type": "log4js-syslog-appender",
+		"tag": "YOUR LOG TAG",
+		"facility": "local0",
+		"path": "/dev/log",
+		"transport": "socket"
+    }
+    
+Options:
+
+* `tag`: appears in front of your log message in the syslog / default: `log4js`
+* `facility`: your syslog facility / default: `local0`
+* `path`: path to your syslog socket / default: `/dev/log`
+* `transport`: how to connect to syslog server / default: `UDP`
 
 Code example:
 
@@ -62,7 +83,7 @@ Please note! Depending on your syslog setup trace, debug and info might not appe
 
 ## Troubleshooting
 
-Please keep in mind, that this module is based on ain2. Ain2 sends messages to the syslog deamon via UDP. Your syslog setup must accept network sockets in order to receive messages. 
+If you want to send log messages via UDP, your syslog setup must accept network sockets in order to receive messages. Most syslog implementations have UDP disabled by default.
 
 For further information see https://github.com/phuesler/ain.
 
