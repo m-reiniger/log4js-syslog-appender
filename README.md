@@ -47,8 +47,8 @@ Options:
 * `facility`: your syslog facility / default: `local0`
 * `path`: path to your syslog socket / default: `/dev/log`
 * `transport`: how to connect to syslog server / default: `UDP`
-
-Code example:
+s
+## Example:
 
 	var log4js = require('log4js');
 
