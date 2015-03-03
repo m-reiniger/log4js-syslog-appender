@@ -36,3 +36,6 @@ puphpet
 # Tests
 test
 Makefile
+
+# IDE
+.idea
