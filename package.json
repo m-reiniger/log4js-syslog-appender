@@ -30,7 +30,7 @@
         "lib": "lib"
     },
     "dependencies": {
-        "ain2": "^2.0.0",
+        "ain2": "^3.0.0",
         "log4js": "^0.6.36"
     },
     "devDependencies": {
